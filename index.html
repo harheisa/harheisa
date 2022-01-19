@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Musiikkisoitin</title>
+	<link rel="stylesheet" href="stylesheet.css"/>
+	<script src="player.js"></script>
+</head>
+<!--html-koodi musiikkisoittimelle, ensimmäisiä koodausprojekteja-->
+<body>
+	<div id="playlist"><b>Playlist</b>
+	<ol>
+	<!--OpenGameArt.org:ista otettuja Public Domainissa olevia kappaleita, muiden tekemiä, mutta CC0. Kivoja kappaleita, kiitos tekijöille-->
+		<li id="song1">http://opengameart.org/sites/default/files/caravan.ogg.ogg</li>
+		<li id="song2">http://opengameart.org/sites/default/files/Searching.ogg</li>
+		<li id="song3">http://opengameart.org/sites/default/files/ForgottenVictory.ogg</li>
+	</ol>
+	</div>
+	<div id="nowplaying">Now playing:</div>
+	
+	<div id="player">
+	<audio id="audio"></audio>
+	<div id="songlength">hh:mm:ss</div>
+	<span id="buttons">
+		<button id="btnPlay">Play</button>
+		<button id="btnPause">Pause</button>
+		<button id="btnStop">Stop</button>
+		<button id="btnPrevsong">Prev.</button>
+		<button id="btnNextsong">Next</button>
+		<button id="btnVoldown">Vol -</button>
+		<button id="btnVolup">Vol +</button>
+	</span>
+	<div id="volNumber"></div>
+	</div>
+<script>
+window.onload = function() {
+console.log("sivu ladattu");
+var player = new Mediaplayer();
+};
+</script>
+</body>
+</html>
